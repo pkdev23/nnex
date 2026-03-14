@@ -6,7 +6,7 @@ from agent_kausal import agent_kausal
 from agent_synthese import agent_synthese
 from agent_validierung import agent_validierung
 
-GEMINI_API_KEY = "AIzaSyDVgp_UUOlofMVv8TFQ65QR8oZkpi3MAlM"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 NUM_EXAMPLES   = 3
 NUR_FEHLER     = False
 

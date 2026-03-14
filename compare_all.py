@@ -5,7 +5,7 @@ from torchvision import datasets, transforms
 from network import SmallNN
 from cluster_circuits import get_activations, kmeans_simple, find_cluster_neurons
 
-GEMINI_API_KEY = "AIzaSyDVgp_UUOlofMVv8TFQ65QR8oZkpi3MAlM"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 N_SAMPLES = 40   # pro Ziffer
 K         = 3    # Cluster
 

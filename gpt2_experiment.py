@@ -5,7 +5,7 @@ from gpt2_dishonesty import load_model, get_next_token, compare_prompts
 from gpt2_causal import (causal_trace_gpt2, find_dishonesty_circuit,
                           patch_neuron)
 
-GEMINI_API_KEY = "AIzaSyDVgp_UUOlofMVv8TFQ65QR8oZkpi3MAlM"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 DEVICE         = "mps" if torch.backends.mps.is_available() else "cpu"
 
 

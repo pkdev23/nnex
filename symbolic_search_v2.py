@@ -6,7 +6,7 @@ from torchvision import datasets, transforms
 from network import SmallNN
 import requests
 
-GEMINI_API_KEY = "AIzaSyDVgp_UUOlofMVv8TFQ65QR8oZkpi3MAlM"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 DB_PATH        = "nnex_activations.db"
 
 

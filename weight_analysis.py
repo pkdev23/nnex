@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from network import SmallNN
 
-GEMINI_API_KEY = "AIzaSyDVgp_UUOlofMVv8TFQ65QR8oZkpi3MAlM"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 DB_PATH        = "nnex_activations.db"
 
 

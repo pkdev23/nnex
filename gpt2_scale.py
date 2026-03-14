@@ -6,7 +6,7 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer, GPT2Config
 from gpt2_attention import deactivate_multiple_heads
 
 DEVICE         = "mps" if torch.backends.mps.is_available() else "cpu"
-GEMINI_API_KEY = "AIzaSyDVgp_UUOlofMVv8TFQ65QR8oZkpi3MAlM"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 # Effektive Heads aus gpt2_attention.py Experiment
 EFFECTIVE_HEADS = [(6, 0), (5, 5), (6, 4), (5, 4), (6, 5)]

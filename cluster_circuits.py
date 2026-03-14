@@ -5,7 +5,7 @@ import requests
 from torchvision import datasets, transforms
 from network import SmallNN
 
-GEMINI_API_KEY = "AIzaSyDVgp_UUOlofMVv8TFQ65QR8oZkpi3MAlM"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 
 def gemini(prompt):

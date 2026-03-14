@@ -5,7 +5,7 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 from gpt2_dishonesty import load_model, get_next_token, get_mlp_activations
 
 DEVICE        = "mps" if torch.backends.mps.is_available() else "cpu"
-GEMINI_API_KEY = "AIzaSyDVgp_UUOlofMVv8TFQ65QR8oZkpi3MAlM"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 
 def gemini(prompt):

@@ -1,0 +1,8 @@
+nnex_activations.db
+model.pth
+data/
+__pycache__/
+*.pyc
+.DS_Store
+outputs/
+runs/

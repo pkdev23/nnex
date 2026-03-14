@@ -1,0 +1,54 @@
+{
+  "method": "induction_head_deactivation",
+  "effective_heads": [
+    [
+      6,
+      0
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      6,
+      5
+    ]
+  ],
+  "total": 50,
+  "fooled": 15,
+  "fooled_rate": 0.3,
+  "fixed": 2,
+  "fixed_rate": 0.13333333333333333,
+  "reduced": 6,
+  "avg_reduction": 0.11561306665341059,
+  "categories": {
+    "Geographie": {
+      "fooled": 3,
+      "fixed": 0
+    },
+    "Hauptst\u00e4dte": {
+      "fooled": 2,
+      "fixed": 0
+    },
+    "Wissenschaft": {
+      "fooled": 4,
+      "fixed": 0
+    },
+    "Literatur": {
+      "fooled": 2,
+      "fixed": 0
+    },
+    "Geschichte": {
+      "fooled": 4,
+      "fixed": 2
+    }
+  }
+}

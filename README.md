@@ -75,7 +75,7 @@ Paris:  0.5%  → 1.6%   (factual knowledge breaking through)
 | Literature | 2/10 | 0/2 |
 | **History** | **4/10** | **2/4** |
 
-**Key finding:** Only historical facts were fully corrected by deactivating induction heads. This suggests that historical facts rely more heavily on sequential patterns – exactly what induction heads process. Other categories (geography, science, literature) appear to use different, more distributed knowledge representations.
+**Key finding:** Only historical facts were fully corrected by deactivating induction heads. This suggests that historical facts rely more heavily on sequential patterns – exactly what induction heads process.
 
 ---
 
@@ -89,6 +89,37 @@ Language models have a concrete, localizable mechanism that makes them vulnerabl
 
 **What remains open:**
 Where factual knowledge itself is stored (distributed across many parameters – no single "Paris neuron"). Transfer to larger models.
+
+---
+
+## Setup
+
+### Requirements
+
+```bash
+pip install torch torchvision transformers pysr requests matplotlib
+```
+
+### API Key
+
+This project uses the Gemini API for natural language explanations.
+
+1. Get a free API key at [aistudio.google.com](https://aistudio.google.com/apikey)
+2. Create a `.env` file in the project root:
+   ```
+   GEMINI_API_KEY=your_key_here
+   ```
+3. The scripts load it automatically via `os.environ.get("GEMINI_API_KEY")`
+
+### Run
+
+```bash
+python train.py              # Train MNIST NN
+python pipeline.py           # Full MNIST pipeline
+python gpt2_experiment.py    # GPT-2 lying experiment
+python gpt2_attention.py     # Induction head analysis
+python gpt2_scale.py         # 50 facts scale test
+```
 
 ---
 
@@ -117,17 +148,6 @@ nnex/
     ├── gpt2_manipulate.py   – MLP neuron manipulation
     ├── gpt2_attention.py    – Induction head analysis
     └── gpt2_scale.py        – 50 facts scale experiment
-```
-
-## Setup
-
-```bash
-pip install torch torchvision transformers pysr requests matplotlib
-python train.py              # Train MNIST NN
-python pipeline.py           # Full MNIST pipeline
-python gpt2_experiment.py    # GPT-2 lying experiment
-python gpt2_attention.py     # Induction head analysis
-python gpt2_scale.py         # 50 facts scale test
 ```
 
 ---
